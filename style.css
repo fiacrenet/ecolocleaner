@@ -1,0 +1,53 @@
+/* Navbar Customization */
+.navbar-brand img {
+    margin-right: 10px;
+}
+
+.navbar-nav .nav-link {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    margin-left: 15px;
+}
+
+.navbar-nav .nav-link.active {
+    font-weight: bold;
+    color: #6F9B04;
+}
+
+.btn-success {
+    background-color: #6F9B04;
+    border-color: #6F9B04;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+.btn-outline-light {
+    color: #fff;
+    border-color: #fff;
+}
+
+.btn-outline-light:hover {
+    background-color: #fff;
+    color: #6F9B04;
+}
+
+.masthead {
+    background-size: cover;
+    min-height: 90vh;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    /* Bold */
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    /* Regular */
+}
