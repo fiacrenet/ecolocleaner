@@ -188,3 +188,26 @@ p {
     text-align: center;
     padding: 15px;
 }
+
+
+
+/* Style personnalisé pour la section des avis */
+.caroussel-design {
+    background-color: #F4F4F4;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.google-review {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.star {
+    color: #FFD700;
+    font-size: 24px;
+}
+
+.footer {
+    background-color: #6F9B04;
+}
