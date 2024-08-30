@@ -15,25 +15,17 @@
     color: #6F9B04;
 }
 
-.btn-success {
+.btn-color {
     background-color: #6F9B04;
     border-color: #6F9B04;
 }
 
-.btn-success:hover {
-    background-color: #218838;
-    border-color: #1e7e34;
+.btn-color:hover {
+    background-color: #6F9B04;
+    border-color: #6F9B04;
+    color: white;
 }
 
-.btn-outline-light {
-    color: #fff;
-    border-color: #fff;
-}
-
-.btn-outline-light:hover {
-    background-color: #fff;
-    color: #6F9B04;
-}
 
 .masthead {
     background-size: cover;
@@ -47,7 +39,7 @@ h2 {
 }
 
 p {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .section-bg {
@@ -75,6 +67,7 @@ p {
 
 .service-description {
     margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .btn-green {
@@ -83,10 +76,6 @@ p {
     font-weight: bold;
 }
 
-.btn-green:hover {
-    background-color: #66a02d;
-    color: white;
-}
 
 .icon-container {
     display: flex;
@@ -116,7 +105,7 @@ p {
 
 .card-custom {
     border: 2px solid #A8D18D;
-    border-radius: 10px;
+    border-radius: 35px;
     padding: 20px;
     text-align: center;
     margin-bottom: 20px;
@@ -193,10 +182,11 @@ p {
 
 /* Style personnalisé pour la section des avis */
 .caroussel-design {
-    background-color: #F4F4F4;
+    background-color: #333;
     padding: 40px;
-    border-radius: 10px;
 }
+
+
 
 .google-review {
     text-align: center;
@@ -210,4 +200,8 @@ p {
 
 .footer {
     background-color: #6F9B04;
+}
+
+.cocoen {
+    border-radius: 15px;
 }
