@@ -1,0 +1,340 @@
+/* Navbar Customization */
+.navbar-brand img {
+    margin-right: 10px;
+}
+
+.navbar-nav .nav-link {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    margin-left: 15px;
+}
+
+.navbar-nav .nav-link.active {
+    font-weight: bold;
+    color: #6F9B04;
+}
+
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 0;
+    }
+
+    .navbar-nav .nav-link {
+        display: block;
+        padding: 10px;
+        font-size: 16px;
+        /* Augmenter la taille de police pour la lisibilité */
+        color: #333;
+        /* Assurez-vous que le texte est lisible */
+    }
+
+    .navbar-nav .nav-link.active {
+        color: #6F9B04;
+        /* Couleur pour l'élément actif */
+    }
+
+    .navbar-nav .nav-link:hover {
+        color: #4CAF50;
+        /* Couleur au survol */
+        text-decoration: underline;
+    }
+
+    /* Style pour le bouton "Devis Gratuit" en mode mobile */
+    .btn-style {
+        margin-top: 10px;
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+    }
+}
+
+.btn.btn-color {
+    background-color: #6F9B04;
+    border-color: #6F9B04;
+}
+
+.btn.btn-color:hover {
+    background-color: #6F9B04;
+    border-color: #6F9B04;
+    color: white;
+}
+
+
+.masthead {
+    background-size: cover;
+    min-height: 90vh;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    /* Bold */
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+}
+
+.section-bg {
+    background-color: #F4F4F4;
+    padding: 40px;
+}
+
+
+.service-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-image {
+    max-width: 100%;
+}
+
+.service-title {
+    color: #78B33A;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.service-description {
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-green {
+    background-color: #78B33A;
+    color: white;
+    font-weight: bold;
+}
+
+
+.icon-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon {
+    color: #f0c62e;
+    font-size: 1.5rem;
+}
+
+
+.section-title {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.section-title span {
+    display: block;
+    height: 3px;
+    width: 50px;
+    background-color: #333;
+    margin: 10px auto 0;
+}
+
+.card-custom {
+    border: 2px solid #A8D18D;
+    border-radius: 35px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card-custom h5 {
+    color: #78B33A;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.card-custom p {
+    font-size: 14px;
+    color: #333;
+}
+
+.btn-custom {
+    background-color: #78B33A;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.image-container img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.chiffres-cles-section {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 0;
+}
+
+
+/* Optionnel: Pour uniformiser les cartes elles-mêmes */
+.chiffres-cles-section .card {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.chiffres-cles-section h2 {
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.chiffre-cle {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 16px;
+}
+
+.card-img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+}
+
+.card {
+    text-align: center;
+    padding: 15px;
+}
+
+
+
+/* Style personnalisé pour la section des avis */
+.caroussel-design {
+    background-color: #333;
+    padding: 40px;
+}
+
+
+
+.google-review {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.star {
+    color: #FFD700;
+    font-size: 24px;
+}
+
+.footer {
+    background-color: #6F9B04;
+}
+
+.cocoen {
+    border-radius: 15px;
+}
+
+/* Définir l'animation de mouvement gauche-droite */
+@keyframes slide-in {
+    0% {
+        transform: translateX(-100%);
+        /* Débute complètement à gauche */
+    }
+
+    100% {
+        transform: translateX(0);
+        /* Termine à la position d'origine */
+    }
+}
+
+/* Appliquer l'animation au conteneur */
+.animated-container {
+    animation: slide-in 1s ease-out;
+    /* 1s pour la durée, ease-out pour un ralentissement en fin d'animation */
+    position: relative;
+    /* Assurez-vous que l'élément est positionné relativement pour que l'animation fonctionne correctement */
+}
+
+@media (max-width: 767.98px) {
+
+    /* Cible les écrans de taille mobile */
+    .chiffres-cles-section .card {
+        margin-bottom: 20px;
+
+    }
+}
+
+/* Assure que les cartes sont centrées sur les petits écrans */
+.chiffres-cles-section .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.chiffres-cles-section .card {
+    text-align: center;
+    /
+}
+
+
+
+/*REALISATION*/
+@media (max-width: 767.98px) {
+
+    /* Cible les écrans de taille mobile */
+    .espacement {
+        margin-bottom: 20px;
+        /* Ajustez cette valeur selon vos besoins */
+    }
+}
+
+
+/* Assurez-vous que le conteneur de la vidéo est responsive */
+.embed-responsive {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+}
+
+.embed-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Optionnel : Espacement et alignement */
+section {
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
