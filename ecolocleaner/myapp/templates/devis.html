@@ -2,6 +2,7 @@
 
 {% block main %}
 {% load static %}
+
 <div class="container mt-5">
     <h2 class="text-center p-5">Demande de devis en ligne.</h2>
 
@@ -66,4 +67,18 @@
         <button type="submit" class="btn btn-warning">ENREGISTRER</button>
     </form>
 </div> <br>
+
+
+<script>
+    // Fonction pour changer le label et placeholder en fonction du choix société/particulier
+    document.getElementById('societe').addEventListener('click', function () {
+        document.getElementById('labelField').innerText = 'Raison sociale';
+        document.getElementById('nameField').placeholder = 'Raison sociale';
+    });
+
+    document.getElementById('particulier').addEventListener('click', function () {
+        document.getElementById('labelField').innerText = 'Nom et prénom';
+        document.getElementById('nameField').placeholder = 'Nom et prénom';
+    });
+</script>
 {% endblock %}
