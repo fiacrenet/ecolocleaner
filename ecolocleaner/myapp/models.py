@@ -21,7 +21,20 @@ class ContactMessage(models.Model):
     message = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
 
+
+class Devis(models.Model):
+    TYPE_CLIENT_CHOICES = [
+        ('societe', 'Société'),
+        ('particulier', 'Particulier'),
+    ]
+    
+    type_client = models.CharField(max_length=20, choices=TYPE_CLIENT_CHOICES, default='societe')
+    raison_sociale = models.CharField(max_length=255, blank=True, null=True)
+    email = models.EmailField()
+    adresse = models.CharField(max_length=255)
+    telephone = models.CharField(max_length=20)
+    service = models.CharField(max_length=255, default='Nettoyage Ecologique & Sans Eau des Véhicules')
+    observation = models.TextField(blank=True, null=True)
+
     def __str__(self):
-        return f"Message de {self.name}"
-    
-    
+        return self.email
