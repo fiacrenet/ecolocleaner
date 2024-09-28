@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block main %}
+{% load static %}
+
+<div class="container mt-5">
+    <h2 class="text-center p-5">Demande de devis en ligne.</h2>
+
+    <!-- Affichage des messages -->
+    {% if messages %}
+    <div class="alert alert-success" role="alert">
+        {% for message in messages %}
+        {{ message }}
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <form method="POST">
+        {% csrf_token %}
+        <div class="d-flex justify-content-center my-4">
+            <input type="radio" class="btn-check" name="type_client" id="societe" value="societe" autocomplete="off"
+                checked>
+            <label class="btn btn-outline-primary me-2" for="societe">Société</label>
+
+            <input type="radio" class="btn-check" name="type_client" id="particulier" value="particulier"
+                autocomplete="off">
+            <label class="btn btn-outline-secondary" for="particulier">Particulier</label>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="nameField" id="labelField" class="form-label">Raison sociale</label>
+                <input type="text" class="form-control" id="nameField" name="raison_sociale"
+                    placeholder="Raison sociale">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="email" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="E-mail">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="adresse" class="form-label">Adresse</label>
+                <input type="text" class="form-control" id="adresse" name="adresse" placeholder="Adresse">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="telephone" class="form-label">Téléphone</label>
+                <input type="text" class="form-control" id="telephone" name="telephone" placeholder="Téléphone">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="service" class="form-label">Service souhaité</label>
+                <select class="form-select" id="service" name="service">
+                    <option selected>Nettoyage Ecologique & Sans Eau des Véhicules</option>
+                    <option>Autre service</option>
+                </select>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="observation" class="form-label">Observation</label>
+                <textarea class="form-control" id="observation" name="observation" rows="3"
+                    placeholder="Observation"></textarea>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-warning">ENREGISTRER</button>
+    </form>
+</div> <br>
+
+
+<script>
+    // Fonction pour changer le label et placeholder en fonction du choix société/particulier
+    document.getElementById('societe').addEventListener('click', function () {
+        document.getElementById('labelField').innerText = 'Raison sociale';
+        document.getElementById('nameField').placeholder = 'Raison sociale';
+    });
+
+    document.getElementById('particulier').addEventListener('click', function () {
+        document.getElementById('labelField').innerText = 'Nom et prénom';
+        document.getElementById('nameField').placeholder = 'Nom et prénom';
+    });
+</script>
+{% endblock %}

@@ -1,563 +1,307 @@
-<!DOCTYPE html>
-<html lang="fr">
+{% extends 'base.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecolo Cleaner System</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'style.css' %}">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+{% block main %}
+{% load static %}
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cocoen/dist/css/cocoen.min.css">
-</head>
+<div class="masthead" style="background-image: url('{% static 'assets/images/bg-image.webp' %}');">
 
-<body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <div class="container">
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="d-flex">
-                <a class="navbar-brand d-flex align-items-center" href="#">
-                    {% load static %}
-                    <img src="{% static 'assets/images/Logo-removebg-preview.png' %}" alt="Logo" width="50">
-                </a>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mt-5 animated-container">
+                <h2 class="text-white" style="margin-top: 100px;">
+                    Préservez vos autocars avec un nettoyage écologique
+                </h2>
+                <br>
+                <p class="text-white">
+                    Transformez l’entretien de vos autocars et de vos bureaux avec notre approche
+                    éco-responsable, qui allie efficacité maximale et respect total de l’environnement.
+                </p>
+                <div class="d-flex flex-column flex-md-row">
+                    <button type="button" class="btn btn-icon py-3 mt-4 me-md-2"
+                        style="background-color: #6F9B04; color: white;">
+                        DEVIS GRATUIT
+                        <img src="{% static 'assets/images/icone-devis.png' %}" alt="Icone Devis" class="ms-2">
+                    </button>
+                    <button type="button" class="btn btn-icon py-3 mt-4 ms-md-2 btn-color btn-style"
+                        style="background-color: #6F9B04; color: white;">
+                        NOUS CONTACTER
+                        <img src="{% static 'assets/images/phone.png' %}" alt="Icone Téléphone" style="height: 35px;"
+                            class="ms-2">
+                    </button>
+                </div>
             </div>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Accueil</a>
-                    </li>
-
-                    <li class="nav-item me-3">
-                        <a class="nav-link" href="#services">Service</a>
-                    </li>
-                    <li class="nav-item me-3">
-                        <a class="nav-link" href="#réalisations">Nos Réalisations</a>
-                    </li>
-                    <li class="nav-item me-3">
-                        <a class="nav-link" href="#partenaire">Nos Partenaires</a>
-                    </li>
-                    <li class="nav-item ms-3 me-3">
-                        <a class="nav-link" href="#">À propos</a>
-                    </li>
-                    <li class="nav-item me-3">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="d-flex">
-                <a href="#" class="btn btn-style btn-color " style="background-color: #6F9B04; color: white;">Devis
-                    Gratuit</a>
-            </div>
-
         </div>
-    </nav>
+    </div>
+
+</div>
+
+<section class="section-bg nos Services
+" id="services">
+    <style>
+        .cocoen img {
+            width: 100%;
+            /* Assure que l'image prend toute la largeur du conteneur */
+            height: 250px;
+            /* Ajuste cette valeur selon la taille souhaitée */
+            object-fit: cover;
+            /* Garde le ratio d'aspect de l'image et la centre dans son conteneur */
+        }
+
+        .cocoen {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .espacement {
+            margin-bottom: 20px;
+            /* Ajuste l'espacement entre les conteneurs */
+        }
+    </style>
+    <h2 class="text-center animated-container">Nos Services</h2>
+    <p class="py-4 offset-sm-2 animated-container">Nettoyage Ecologique, Manuel & Sans Eau, des Véhicules, Autocars,
+        Bus, Mobiliers de
+        bureau,
+        Locaux, Vitres,
+        avec des
+        produits bio et des microfibres biodégradables. Nous vous proposons des services 100% français, avec des
+        produits
+        (Eco-cert & Lucie 26000) « Made In France » qui sont compatibles avec votre politique RSE.</p>
 
     {% load static %}
-    <div class="masthead" style="background-image: url('{% static 'assets/images/bg-image.webp' %}');">
 
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 mt-5 animated-container">
-                    <h2 class="text-white" style="margin-top: 100px;">
-                        Préservez vos autocars avec un nettoyage écologique
-                    </h2>
-                    <br>
-                    <p class="text-white">
-                        Transformez l’entretien de vos autocars et de vos bureaux avec notre approche
-                        éco-responsable, qui allie efficacité maximale et respect total de l’environnement.
-                    </p>
-                    <div class="d-flex flex-column flex-md-row">
-                        <button type="button" class="btn btn-icon py-3 mt-4 me-md-2"
-                            style="background-color: #6F9B04; color: white;">
-                            DEVIS GRATUIT
-                            <img src="{% static 'assets/images/icone-devis.png' %}" alt="Icone Devis" class="ms-2">
-                        </button>
-                        <button type="button" class="btn btn-icon py-3 mt-4 ms-md-2 btn-color btn-style"
-                            style="background-color: #6F9B04; color: white;">
-                            NOUS CONTACTER
-                            <img src="{% static 'assets/images/phone.png' %}" alt="Icone Téléphone"
-                                style="height: 35px;" class="ms-2">
-                        </button>
+    <!-- Autres sections de la page d'accueil -->
+
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            {% for service in services %}
+            <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                <div class="container my-5">
+                    <div class="service-container row">
+                        <div class="col-md-6">
+                            <img src="{{ service.image.url }}" alt="{{ service.title }}" class="service-image">
+                        </div>
+                        <div class="col-md-6 d-flex flex-column justify-content-center">
+                            <div class="service-title">
+                                {{ service.title }}
+                            </div>
+                            <div class="service-description">
+                                <p>{{ service.description }}</p>
+                            </div>
+                            <a href="#" class="btn btn-primary btn-color align-self-start"
+                                style="background-color: #6F9B04; color: white; border-color: #6F9B04;">VOIR
+                                PLUS</a>
+                        </div>
                     </div>
                 </div>
             </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Autres sections de la page d'accueil -->
+
+</section>
+
+<section>
+    <div class="container my-5">
+        <h2 class="section-title">Pourquoi nous choisir ?<span></span></h2>
+        <div class="row">
+            <style>
+                .card-custom {
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    padding: 20px;
+                    background-color: #fff;
+                    border-radius: 40px;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                }
+
+                .card-custom .image img {
+                    max-width: 80px;
+                    /* Réduit la taille des logos */
+                    margin: 0 auto 20px auto;
+                    display: block;
+                }
+
+                .card-custom h5 {
+                    margin-top: auto;
+                    font-size: 1.25rem;
+                    font-weight: 600;
+                }
+
+                .card-custom p {
+                    margin-bottom: auto;
+                    font-size: 0.9rem;
+                    line-height: 1.5;
+                    color: #666;
+                }
+
+                @media (max-width: 767px) {
+                    .col-md-4 {
+                        margin-bottom: 20px;
+                        /* Ajoute un espace entre les conteneurs */
+                    }
+                }
+            </style>
+            <div class="col-md-4">
+                <div class="card-custom">
+                    <div class="image">
+                        <img src="{% static 'assets/images/lave-auto.png'%}" alt="Nettoyage Écologique et Innovant"
+                            class="img-fluid">
+                    </div>
+                    <h5>Nettoyage Écologique et Innovant</h5>
+                    <p class="text-start">Notre méthode de nettoyage utilise des produits respectueux de
+                        l'environnement, garantissant un service efficace tout en préservant la planète.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-custom">
+                    <div class="image">
+                        <img src="{% static 'assets/images/justice-sociale.png' %}" alt="Engagement Social et Inclusion"
+                            class="img-fluid">
+                    </div>
+                    <h5>Engagement Social et Inclusion</h5>
+                    <p class="text-start">Nous croyons en l’intégration sociale et en l’inclusion professionnelle.
+                        Nos équipes sont majoritairement composées de personnes issues de parcours d'insertion, à
+                        qui
+                        nous offrons des opportunités de formation et de développement.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-custom">
+                    <div class="image">
+                        <img src="{% static 'assets/images/haute-qualite.png' %}" alt="Service de Haute Qualité"
+                            class="img-fluid">
+                    </div>
+                    <h5>Service de Haute Qualité</h5>
+                    <p class="text-start">Notre priorité est de vous offrir un service de qualité, réalisé par des
+                        techniciens qualifiés. Chaque intervention est effectuée avec un souci du détail inégalé.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="#" class="btn btn-primary btn-color"
+                style="background-color: #6F9B04; color: white;border-color: #6F9B04;">CONTACTEZ-NOUS</a>
+        </div>
+    </div>
+</section>
+
+<section class="chiffres-cles-section">
+    <div class="container-fluid text-center">
+        <div class="container">
+            <h2>Chiffres clés</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="chiffre-cle" data-target="3000">+0</div>
+                    <div class="description">Véhicules nettoyés par an</div>
+                </div>
+                <div class="col-md-4">
+                    <div class="chiffre-cle" data-target="750000">+0</div>
+                    <div class="description">Litres d'eau économisés par an depuis 2027</div>
+                </div>
+                <div class="col-md-4">
+                    <div class="chiffre-cle" data-target="52500000">+0</div>
+                    <div class="description">Litres d'eau économisés pour +210000 véhicules nettoyés</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<section class="nos-réalisations
+" id="réalisations">
+    <div class="container realisations-section">
+        <h2 class="section-title mt-5">Nos réalisations</h2>
+        <p class="me-5">Découvrez les résultats remarquables de nos nettoyages 100% écologiques dans les photos
+            ci-dessous. Vous
+            pourrez
+            constater l'efficacité de notre méthode en comparant les images avant et après. Servez-vous du curseur
+            orange
+            pour glisser d'un côté à l'autre et observer la transformation impressionnante que nous apportons, tout
+            en
+            respectant l'environnement.</p> <br>
+        <div class="row">
+            {% for realization in realizations %}
+            <div class="col-md-4">
+                <div class="cocoen espacement">
+                    <img src="{{ realization.avant.url }}" alt="Avant">
+                    <img src="{{ realization.apres.url }}" alt="Après">
+                </div>
+            </div>
+            {% endfor %}
         </div>
 
     </div>
+</section> <br><br><br>
 
-    <section class="section-bg nos Services
-" id="services">
-        <style>
-            .cocoen img {
-                width: 100%;
-                /* Assure que l'image prend toute la largeur du conteneur */
-                height: 250px;
-                /* Ajuste cette valeur selon la taille souhaitée */
-                object-fit: cover;
-                /* Garde le ratio d'aspect de l'image et la centre dans son conteneur */
-            }
-
-            .cocoen {
-                position: relative;
-                overflow: hidden;
-            }
-
-            .espacement {
-                margin-bottom: 20px;
-                /* Ajuste l'espacement entre les conteneurs */
-            }
-        </style>
-        <h2 class="text-center animated-container">Nos Services</h2>
-        <p class="py-4 offset-sm-2 animated-container">Nettoyage Ecologique, Manuel & Sans Eau, des Véhicules, Autocars,
-            Bus, Mobiliers de
-            bureau,
-            Locaux, Vitres,
-            avec des
-            produits bio et des microfibres biodégradables. Nous vous proposons des services 100% français, avec des
-            produits
-            (Eco-cert & Lucie 26000) « Made In France » qui sont compatibles avec votre politique RSE.</p>
-
-        {% load static %}
-
-        <!-- Autres sections de la page d'accueil -->
-
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                {% for service in services %}
-                <div class="carousel-item {% if forloop.first %}active{% endif %}">
-                    <div class="container my-5">
-                        <div class="service-container row">
-                            <div class="col-md-6">
-                                <img src="{{ service.image.url }}" alt="{{ service.title }}" class="service-image">
-                            </div>
-                            <div class="col-md-6 d-flex flex-column justify-content-center">
-                                <div class="service-title">
-                                    {{ service.title }}
-                                </div>
-                                <div class="service-description">
-                                    <p>{{ service.description }}</p>
-                                </div>
-                                <a href="#" class="btn btn-primary btn-color align-self-start"
-                                    style="background-color: #6F9B04; color: white; border-color: #6F9B04;">VOIR
-                                    PLUS</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-
-        <!-- Autres sections de la page d'accueil -->
-
-    </section>
-
-    <section>
-        <div class="container my-5">
-            <h2 class="section-title">Pourquoi nous choisir ?<span></span></h2>
-            <div class="row">
-                <style>
-                    .card-custom {
-                        height: 100%;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: space-between;
-                        padding: 20px;
-                        background-color: #fff;
-                        border-radius: 40px;
-                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                    }
-
-                    .card-custom .image img {
-                        max-width: 80px;
-                        /* Réduit la taille des logos */
-                        margin: 0 auto 20px auto;
-                        display: block;
-                    }
-
-                    .card-custom h5 {
-                        margin-top: auto;
-                        font-size: 1.25rem;
-                        font-weight: 600;
-                    }
-
-                    .card-custom p {
-                        margin-bottom: auto;
-                        font-size: 0.9rem;
-                        line-height: 1.5;
-                        color: #666;
-                    }
-
-                    @media (max-width: 767px) {
-                        .col-md-4 {
-                            margin-bottom: 20px;
-                            /* Ajoute un espace entre les conteneurs */
-                        }
-                    }
-                </style>
-                <div class="col-md-4">
-                    <div class="card-custom">
-                        <div class="image">
-                            <img src="{% static 'assets/images/lave-auto.png'%}" alt="Nettoyage Écologique et Innovant"
-                                class="img-fluid">
-                        </div>
-                        <h5>Nettoyage Écologique et Innovant</h5>
-                        <p class="text-start">Notre méthode de nettoyage utilise des produits respectueux de
-                            l'environnement, garantissant un service efficace tout en préservant la planète.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card-custom">
-                        <div class="image">
-                            <img src="{% static 'assets/images/justice-sociale.png' %}"
-                                alt="Engagement Social et Inclusion" class="img-fluid">
-                        </div>
-                        <h5>Engagement Social et Inclusion</h5>
-                        <p class="text-start">Nous croyons en l’intégration sociale et en l’inclusion professionnelle.
-                            Nos équipes sont majoritairement composées de personnes issues de parcours d'insertion, à
-                            qui
-                            nous offrons des opportunités de formation et de développement.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card-custom">
-                        <div class="image">
-                            <img src="{% static 'assets/images/haute-qualite.png' %}" alt="Service de Haute Qualité"
-                                class="img-fluid">
-                        </div>
-                        <h5>Service de Haute Qualité</h5>
-                        <p class="text-start">Notre priorité est de vous offrir un service de qualité, réalisé par des
-                            techniciens qualifiés. Chaque intervention est effectuée avec un souci du détail inégalé.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="text-center mt-4">
-                <a href="#" class="btn btn-primary btn-color"
-                    style="background-color: #6F9B04; color: white;border-color: #6F9B04;">CONTACTEZ-NOUS</a>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="container-fluid chiffres-cles-section text-center">
-            <div class="container">
-                <h2>Chiffres clés</h2>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="chiffre-cle" data-target="3000">+0</div>
-                        <div class="description">Véhicules nettoyés par an</div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="chiffre-cle" data-target="750000">+0</div>
-                        <div class="description">Litres d'eau économisés par an depuis 2027</div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="chiffre-cle" data-target="52500000">+0</div>
-                        <div class="description">Litres d'eau économisés pour +210000 véhicules nettoyés</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
-    <section class="nos-réalisations
-" id="réalisations">
-        <div class="container realisations-section">
-            <h2 class="section-title mt-5">Nos réalisations</h2>
-            <p class="me-5">Découvrez les résultats remarquables de nos nettoyages 100% écologiques dans les photos
-                ci-dessous. Vous
-                pourrez
-                constater l'efficacité de notre méthode en comparant les images avant et après. Servez-vous du curseur
-                orange
-                pour glisser d'un côté à l'autre et observer la transformation impressionnante que nous apportons, tout
-                en
-                respectant l'environnement.</p> <br>
-            <div class="row">
-                {% for realization in realizations %}
-                <div class="col-md-4">
-                    <div class="cocoen espacement">
-                        <img src="{{ realization.avant.url }}" alt="Avant">
-                        <img src="{{ realization.apres.url }}" alt="Après">
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-
-        </div>
-    </section> <br><br><br>
-
-    <section class="chiffres-cles-section" id="partenaire">
-        <style>
-            .same-size-img {
-                width: 100%;
-                height: 150px;
-                object-fit: contain;
-                display: block;
-            }
-        </style>
-        <div class="container">
-            <h2 class="text-center mb-5 mt-5">Nos Partenaires</h2>
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="card">
-                        <img src="{% static 'assets/images/logo5.jpg' %}" alt="Rellumix"
-                            class="img-fluid same-size-img">
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card">
-                        <img src="{% static 'assets/images/logo2.png' %}" alt="PharmaField"
-                            class="img-fluid same-size-img">
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card">
-                        <img src="{% static 'assets/images/logo3.jpg' %}" alt="neDi" class="img-fluid same-size-img">
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card">
-                        <img src="{% static 'assets/images/logo.png' %}" alt="Adopte Un Bureau"
-                            class="img-fluid same-size-img">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="caroussel-design">
-        <div class="container">
-            <div class="google-review mt-5">
-                <h2 style="color: rgb(255, 255, 255);">Avis Google</h2>
-                <span class="star">★★★★★</span>
-            </div>
-            <div class="testimonial mt-5">
-                <p class=" offset-2" style="color: rgb(255, 255, 255);">« Les témoignages permettent de comprendre
-                    comment vous travaillez et
-                    d’en savoir plus sur vos
-                    articles et
-                    vos services. »</p>
-            </div>
-            <ul class="pagination mt-5">
-                <li class="active"></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </div>
-    </section>
-    <section class="text-center mt-5">
-        <h1>Voyez comment nous faisons la différence</h1>
-        <div class="row mt-3 d-flex justify-content-center">
-            <div class="col-12 col-md-8 col-lg-6 mt-5">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://youtu.be/T7gUdtQ8LsA" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-    </section>
-    <footer id="contact">
-        <section class="footer">
-            <div class="container">
-                <div class="row mt-3">
-                    <div class="col-12 col-md-6">
-                        <div class="p-3 mt-5">
-                            <ul class="list-unstyled">
-                                <li style="color: white;"><img src="{% static 'assets/images/phonee.png' %}"
-                                        alt="Phone icon">3 bld des
-                                    Explorateurs, 95800 Cergy-le Haut</li>
-                                <li style="color: white;"><img src="{% static 'assets/images/email.png' %}"
-                                        alt="Email icon">07 81 91 63 13
-                                </li>
-                                <li style="color: white;"><img src="{% static 'assets/images/address.png' %}"
-                                        alt="Address icon">contact@ecolocleanersystem.fr</li>
-                            </ul>
-                            <p class="mt-3"><a href="" style="color: white; text-decoration: none;">Mentions légales</a>
-                            </p>
-                            <p><a href="" style="color: white; text-decoration: none;">Politique de confidentialité</a>
-                            </p>
-                            <p><a href="" style="color: white; text-decoration: none;">Conditions Générales de vente</a>
-                            </p>
-
-                            <div class="row g-0">
-                                <div class="col-2">
-                                    <a href="#"><img src="{% static 'assets/images/instagram.png' %}"
-                                            alt="Instagram icon" class="img-fluid"></a>
-                                </div>
-                                <div class="col-2">
-                                    <a href="#"><img src="{% static 'assets/images/facebook.png' %}" alt="Facebook icon"
-                                            class="img-fluid"></a>
-                                </div>
-                                <div class="col-2">
-                                    <a href="#"><img src="{% static 'assets/images/twitter.png' %}" alt="Twitter icon"
-                                            class="img-fluid"></a>
-                                </div>
-                                <div class="col-2">
-                                    <a href="#"><img src="{% static 'assets/images/linkdin.png' %}" alt="Linkedin icon"
-                                            class="img-fluid"></a>
-                                </div>
-                                <div class="col-2">
-                                    <a href="#"><img src="{% static 'assets/images/youyube.png' %}" alt="Youtube icon"
-                                            class="img-fluid"></a>
-                                </div>
-                                <div class="col-2">
-                                    <a href="#"><img src="{% static 'assets/images/titktok.png' %}" alt="TikTok icon"
-                                            class="img-fluid"></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 d-flex justify-content-center">
-                        <style>
-                            /* styles.css */
-
-                            /* Style général du formulaire */
-                            .contact-form {
-                                padding: 20px;
-                                border-radius: 15px;
-                                background-color: #f8f8f8;
-                                /* Couleur de fond claire pour le formulaire */
-                                max-width: 600px;
-                                /* Largeur maximale pour le formulaire */
-                                margin: auto;
-                                /* Centrer le formulaire */
-                            }
-
-                            /* Style des groupes de champs du formulaire */
-                            .contact-form .form-group {
-                                margin-bottom: 15px;
-                                /* Espacement entre les champs */
-                            }
-
-                            .contact-form .form-group label {
-                                display: block;
-                                font-weight: bold;
-                                /* Gras pour les étiquettes */
-                                margin-bottom: 5px;
-                                /* Espacement entre l'étiquette et le champ */
-                            }
-
-                            .contact-form .form-group input,
-                            .contact-form .form-group textarea {
-                                width: 100%;
-                                /* Prend toute la largeur disponible */
-                                padding: 10px;
-                                /* Espacement intérieur */
-                                border: 1px solid #ddd;
-                                /* Bordure légère */
-                                border-radius: 5px;
-                                /* Coins arrondis */
-                                box-sizing: border-box;
-                                /* Inclure padding et border dans la largeur totale */
-                            }
-
-                            /* Style du bouton de soumission */
-                            .btn-submit {
-                                background-color: #78B33A;
-                                /* Couleur de fond */
-                                color: white;
-                                /* Couleur du texte */
-                                border: none;
-                                /* Supprimer la bordure par défaut */
-                                padding: 15px;
-                                /* Espacement intérieur */
-                                border-radius: 5px;
-                                /* Coins arrondis */
-                                cursor: pointer;
-                                /* Curseur pointer */
-                                font-size: 16px;
-                                /* Taille du texte */
-                                width: 100%;
-                                /* Prend toute la largeur disponible */
-                            }
-
-                            .btn-submit:hover {
-                                background-color: #66a02c;
-                                /* Couleur au survol */
-                            }
-                        </style>
-                        <div class="card p-3 mt-5 mb-5" style="width: 100%; max-width: 400px; border-radius: 45px;">
-                            <h3 class="text-center">Contactez-nous</h3>
-                            <form method="post" class="contact-form">
-                                {% csrf_token %}
-                                <div class="form-group">
-                                    {{ form.name.label_tag }}
-                                    {{ form.name }}
-                                </div>
-                                <div class="form-group">
-                                    {{ form.email.label_tag }}
-                                    {{ form.email }}
-                                </div>
-                                <div class="form-group">
-                                    {{ form.message.label_tag }}
-                                    {{ form.message }}
-                                </div>
-                                <button type="submit" class="btn-submit">Envoyer</button>
-                            </form>
-
-
-                            {% if messages %}
-                            <div class="alert alert-success mt-3">
-                                {% for message in messages %}
-                                {{ message }}
-                                {% endfor %}
-                            </div>
-                            {% endif %}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </footer>
-
-
-    <script>
-        // Fonction pour incrémenter les chiffres avec un "+" devant
-        function animateCounter(el, target) {
-            let count = 0;
-            const increment = target / 200; // Ajuster ce chiffre pour changer la vitesse
-            const updateCount = () => {
-                count += increment;
-                if (count < target) {
-                    el.innerText = '+' + Math.ceil(count);
-                    requestAnimationFrame(updateCount);
-                } else {
-                    el.innerText = '+' + target;
-                }
-            };
-            updateCount();
+<section class="chiffres-cles-section" id="partenaire">
+    <style>
+        .same-size-img {
+            width: 100%;
+            height: 150px;
+            object-fit: contain;
+            display: block;
         }
-
-        // Initialiser l'animation sur les éléments avec la classe 'chiffre-cle'
-        document.addEventListener('DOMContentLoaded', () => {
-            document.querySelectorAll('.chiffre-cle').forEach(el => {
-                const target = parseInt(el.getAttribute('data-target'));
-                animateCounter(el, target);
-            });
-        }); document.addEventListener('DOMContentLoaded', function () {
-            var cocoenElements = document.querySelectorAll('.cocoen');
-            cocoenElements.forEach(function (el) {
-                new Cocoen(el);
-            });
-        });
-
-
-    </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/cocoen/dist/js/cocoen.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-event-move/2.0.0/jquery.event.move.js"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
-</html>
+    </style>
+    <div class="container">
+        <h2 class="text-center mb-5 mt-5">Nos Partenaires</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="{% static 'assets/images/logo5.jpg' %}" alt="Rellumix" class="img-fluid same-size-img">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="{% static 'assets/images/logo2.png' %}" alt="PharmaField" class="img-fluid same-size-img">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="{% static 'assets/images/logo3.jpg' %}" alt="neDi" class="img-fluid same-size-img">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="{% static 'assets/images/logo.png' %}" alt="Adopte Un Bureau"
+                        class="img-fluid same-size-img">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="caroussel-design">
+    <div class="container">
+        <div class="google-review mt-5">
+            <h2 style="color: rgb(255, 255, 255);">Avis Google</h2>
+            <span class="star">★★★★★</span>
+        </div>
+        <div class="testimonial mt-5">
+            <p class=" offset-2" style="color: rgb(255, 255, 255);">« Les témoignages permettent de comprendre
+                comment vous travaillez et
+                d’en savoir plus sur vos
+                articles et
+                vos services. »</p>
+        </div>
+        <ul class="pagination mt-5">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</section>
+<section class="text-center mt-5">
+    <h1>Voyez comment nous faisons la différence</h1>
+    <div class="row mt-3 d-flex justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6 mt-5">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://youtu.be/T7gUdtQ8LsA" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
