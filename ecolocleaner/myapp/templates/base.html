@@ -72,45 +72,51 @@
                     <div class="col-12 col-md-6">
                         <div class="p-3 mt-5">
                             <ul class="list-unstyled">
-                                <li style="color: white;"><img src="{% static 'assets/images/phonee.png' %}"
-                                        alt="Phone icon">3 bld des
-                                    Explorateurs, 95800 Cergy-le Haut</li>
-                                <li style="color: white;"><img src="{% static 'assets/images/email.png' %}"
-                                        alt="Email icon">07 81 91 63 13
+                                <li style="color: white;">
+                                    <img src="{% static 'assets/images/phonee.png' %}" alt="Adresse de Cergy-le Haut"> 3
+                                    bld
+                                    des Explorateurs, 95800 Cergy-le Haut
                                 </li>
-                                <li style="color: white;"><img src="{% static 'assets/images/address.png' %}"
-                                        alt="Address icon">contact@ecolocleanersystem.fr</li>
+                                <li style="color: white;">
+                                    <img src="{% static 'assets/images/email.png' %}" alt="Téléphone"> 07 81 91 63 13
+                                </li>
+                                <li style="color: white;">
+                                    <img src="{% static 'assets/images/address.png' %}" alt="Email">
+                                    contact@ecolocleanersystem.fr
+                                </li>
                             </ul>
-                            <p class="mt-3"><a href="" style="color: white; text-decoration: none;">Mentions légales</a>
+                            <p class="mt-3"><a href="#" style="color: white; text-decoration: none;">Mentions
+                                    légales</a>
                             </p>
-                            <p><a href="" style="color: white; text-decoration: none;">Politique de confidentialité</a>
+                            <p><a href="#" style="color: white; text-decoration: none;">Politique de confidentialité</a>
                             </p>
-                            <p><a href="" style="color: white; text-decoration: none;">Conditions Générales de vente</a>
+                            <p><a href="#" style="color: white; text-decoration: none;">Conditions Générales de
+                                    Vente</a>
                             </p>
 
                             <div class="row g-0">
                                 <div class="col-2">
-                                    <a href="#"><img src="{% static 'assets/images/instagram.png' %}"
-                                            alt="Instagram icon" class="img-fluid"></a>
-                                </div>
-                                <div class="col-2">
-                                    <a href="#"><img src="{% static 'assets/images/facebook.png' %}" alt="Facebook icon"
+                                    <a href="#"><img src="{% static 'assets/images/instagram.png' %}" alt="Instagram"
                                             class="img-fluid"></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#"><img src="{% static 'assets/images/twitter.png' %}" alt="Twitter icon"
+                                    <a href="#"><img src="{% static 'assets/images/facebook.png' %}" alt="Facebook"
                                             class="img-fluid"></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#"><img src="{% static 'assets/images/linkdin.png' %}" alt="Linkedin icon"
+                                    <a href="#"><img src="{% static 'assets/images/twitter.png' %}" alt="Twitter"
                                             class="img-fluid"></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#"><img src="{% static 'assets/images/youyube.png' %}" alt="Youtube icon"
+                                    <a href="#"><img src="{% static 'assets/images/linkedin.png' %}" alt="LinkedIn"
                                             class="img-fluid"></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#"><img src="{% static 'assets/images/titktok.png' %}" alt="TikTok icon"
+                                    <a href="#"><img src="{% static 'assets/images/youtube.png' %}" alt="YouTube"
+                                            class="img-fluid"></a>
+                                </div>
+                                <div class="col-2">
+                                    <a href="#"><img src="{% static 'assets/images/tiktok.png' %}" alt="TikTok"
                                             class="img-fluid"></a>
                                 </div>
                             </div>
@@ -118,71 +124,63 @@
                     </div>
                     <div class="col-12 col-md-6 d-flex justify-content-center">
                         <style>
-                            /* styles.css */
-
-                            /* Style général du formulaire */
                             .contact-form {
-                                padding: 20px;
+                                padding: 30px;
                                 border-radius: 15px;
                                 background-color: #f8f8f8;
-                                /* Couleur de fond claire pour le formulaire */
                                 max-width: 600px;
-                                /* Largeur maximale pour le formulaire */
                                 margin: auto;
-                                /* Centrer le formulaire */
+                                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
                             }
 
-                            /* Style des groupes de champs du formulaire */
                             .contact-form .form-group {
-                                margin-bottom: 15px;
-                                /* Espacement entre les champs */
+                                margin-bottom: 20px;
                             }
 
                             .contact-form .form-group label {
                                 display: block;
                                 font-weight: bold;
-                                /* Gras pour les étiquettes */
-                                margin-bottom: 5px;
-                                /* Espacement entre l'étiquette et le champ */
+                                margin-bottom: 8px;
+                                color: #333;
                             }
 
                             .contact-form .form-group input,
                             .contact-form .form-group textarea {
                                 width: 100%;
-                                /* Prend toute la largeur disponible */
-                                padding: 10px;
-                                /* Espacement intérieur */
+                                padding: 12px;
                                 border: 1px solid #ddd;
-                                /* Bordure légère */
-                                border-radius: 5px;
-                                /* Coins arrondis */
+                                border-radius: 8px;
                                 box-sizing: border-box;
-                                /* Inclure padding et border dans la largeur totale */
+                                font-size: 16px;
+                                color: #555;
                             }
 
-                            /* Style du bouton de soumission */
+                            .contact-form .form-group textarea {
+                                height: 150px;
+                                resize: none;
+                            }
+
                             .btn-submit {
                                 background-color: #78B33A;
-                                /* Couleur de fond */
                                 color: white;
-                                /* Couleur du texte */
                                 border: none;
-                                /* Supprimer la bordure par défaut */
                                 padding: 15px;
-                                /* Espacement intérieur */
-                                border-radius: 5px;
-                                /* Coins arrondis */
+                                border-radius: 8px;
                                 cursor: pointer;
-                                /* Curseur pointer */
-                                font-size: 16px;
-                                /* Taille du texte */
+                                font-size: 18px;
                                 width: 100%;
-                                /* Prend toute la largeur disponible */
+                                transition: background-color 0.3s ease;
                             }
 
                             .btn-submit:hover {
                                 background-color: #66a02c;
-                                /* Couleur au survol */
+                            }
+
+                            .contact-form h3 {
+                                font-size: 24px;
+                                color: #333;
+                                text-align: center;
+                                margin-bottom: 20px;
                             }
                         </style>
                         <div class="card p-3 mt-5 mb-5" style="width: 100%; max-width: 400px; border-radius: 45px;">
@@ -204,7 +202,6 @@
                                 <button type="submit" class="btn-submit">Envoyer</button>
                             </form>
 
-
                             {% if messages %}
                             <div class="alert alert-success mt-3">
                                 {% for message in messages %}
@@ -218,6 +215,8 @@
             </div>
         </section>
     </footer>
+
+
 
     <script>
         // Fonction pour incrémenter les chiffres avec un "+" devant
