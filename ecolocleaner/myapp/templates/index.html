@@ -17,17 +17,19 @@
                     éco-responsable, qui allie efficacité maximale et respect total de l’environnement.
                 </p>
                 <div class="d-flex flex-column flex-md-row">
-                    <button type="button" class="btn btn-icon py-3 mt-4 me-md-2"
+                    <a href="{% url 'devis' %}" class="btn btn-icon py-3 mt-4 me-md-2"
                         style="background-color: #6F9B04; color: white;">
                         DEVIS GRATUIT
                         <img src="{% static 'assets/images/icone-devis.png' %}" alt="Icone Devis" class="ms-2">
-                    </button>
-                    <button type="button" class="btn btn-icon py-3 mt-4 ms-md-2 btn-color btn-style"
+                    </a>
+
+                    <a href="#contact" class="btn btn-icon py-3 mt-4 ms-md-2 btn-color btn-style"
                         style="background-color: #6F9B04; color: white;">
                         NOUS CONTACTER
                         <img src="{% static 'assets/images/phone.png' %}" alt="Icone Téléphone" style="height: 35px;"
                             class="ms-2">
-                    </button>
+                    </a>
+
                 </div>
             </div>
         </div>
@@ -67,7 +69,6 @@
         produits
         (Eco-cert & Lucie 26000) « Made In France » qui sont compatibles avec votre politique RSE.</p>
 
-    <!-- Autres sections de la page d'accueil -->
 
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
@@ -85,9 +86,9 @@
                             <div class="service-description">
                                 <p>{{ service.description }}</p>
                             </div>
-                            <a href="#" class="btn btn-primary btn-color align-self-start"
-                                style="background-color: #6F9B04; color: white; border-color: #6F9B04;">VOIR
-                                PLUS</a>
+                            <a href="{% url 'devis' %}" class="btn btn-primary btn-color align-self-start"
+                                style="background-color: #6F9B04; color: white; border-color: #6F9B04;">DEVIS
+                                GRATUIT</a>
                         </div>
                     </div>
                 </div>
@@ -95,8 +96,6 @@
             {% endfor %}
         </div>
     </div>
-
-    <!-- Autres sections de la page d'accueil -->
 
 </section>
 
@@ -214,7 +213,8 @@
 " id="réalisations">
     <div class="container realisations-section">
         <h2 class="section-title mt-5">Nos réalisations</h2>
-        <p class="me-5">Découvrez les résultats remarquables de nos nettoyages 100% écologiques dans les photos
+        <p class="me-5" style="text-align: center;">Découvrez les résultats remarquables de nos nettoyages 100%
+            écologiques dans les photos
             ci-dessous. Vous
             pourrez
             constater l'efficacité de notre méthode en comparant les images avant et après. Servez-vous du curseur
@@ -279,7 +279,8 @@
             <span class="star">★★★★★</span>
         </div>
         <div class="testimonial mt-5">
-            <p class=" offset-2" style="color: rgb(255, 255, 255);">« Les témoignages permettent de comprendre
+            <p class="" style="color: rgb(255, 255, 255); text-align: center;">« Les témoignages permettent de
+                comprendre
                 comment vous travaillez et
                 d’en savoir plus sur vos
                 articles et
