@@ -21,6 +21,16 @@ class ContactMessage(models.Model):
     message = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
 
+class ContactMessage(models.Model):
+   fullname = models.CharField(max_length=255, default="John doe")
+   email = models.EmailField(default="exemple@example.com") 
+   phone = models.CharField(max_length=20, default="61377398")
+   subject = models.CharField(max_length=255, default="Lavage")
+   message = models.TextField(default="Message")
+   created_at = models.DateTimeField(auto_now_add=True)
+
+   def __str__(self):
+    return f"Message de {self.fullname} - {self.email}"
 
 class Devis(models.Model):
     TYPE_CLIENT_CHOICES = [

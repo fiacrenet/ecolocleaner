@@ -4,7 +4,7 @@ from .models import ContactMessage, Devis
 class ContactForm(forms.ModelForm):
     class Meta:
         model = ContactMessage
-        fields = ['name', 'email', 'message']
+        fields = ['fullname', 'email', 'phone', 'subject', 'message']
 
 
 class DevisForm(forms.ModelForm):

@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 mt-5 animated-container">
-                <h2 class="text-white" style="margin-top: 100px;">
+                <h2 class="text-white" style="margin-top: 100px;font-size: 35px;">
                     Préservez vos autocars avec un nettoyage écologique
                 </h2>
                 <br>
@@ -18,13 +18,13 @@
                 </p>
                 <div class="d-flex flex-column flex-md-row">
                     <a href="{% url 'devis' %}" class="btn btn-icon py-3 mt-4 me-md-2"
-                        style="background-color: #6F9B04; color: white;">
+                        style="background-color: #6F9B04; color: white;border-radius:0px">
                         DEVIS GRATUIT
                         <img src="{% static 'assets/images/icone-devis.png' %}" alt="Icone Devis" class="ms-2">
                     </a>
 
                     <a href="#contact" class="btn btn-icon py-3 mt-4 ms-md-2 btn-color btn-style"
-                        style="background-color: #6F9B04; color: white;">
+                        style="background-color: #6F9B04; color: white;border-radius:0px">
                         NOUS CONTACTER
                         <img src="{% static 'assets/images/phone.png' %}" alt="Icone Téléphone" style="height: 35px;"
                             class="ms-2">
@@ -59,7 +59,7 @@
         }
     </style>
     <h2 class="text-center animated-container">Nos Services</h2>
-    <p class="py-4 text-center animated-container">Nettoyage Ecologique, Manuel & Sans Eau, des
+    <p class="py-4 text-center animated-container" style="color: #686262;">Nettoyage Ecologique, Manuel & Sans Eau, des
         Véhicules, Autocars,
         Bus, Mobiliers de
         bureau,
@@ -70,7 +70,8 @@
         (Eco-cert & Lucie 26000) « Made In France » qui sont compatibles avec votre politique RSE.</p>
 
 
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel"
+        style=" border: 2px solid #6F9B04; padding: 10px;">
         <div class="carousel-inner">
             {% for service in services %}
             <div class="carousel-item {% if forloop.first %}active{% endif %}">
@@ -83,11 +84,11 @@
                             <div class="service-title">
                                 {{ service.title }}
                             </div>
-                            <div class="service-description">
+                            <div class="service-description" style="color: #686262;">
                                 <p>{{ service.description }}</p>
                             </div>
                             <a href="{% url 'devis' %}" class="btn btn-primary btn-color align-self-start"
-                                style="background-color: #6F9B04; color: white; border-color: #6F9B04;">DEVIS
+                                style="background-color: #6F9B04; color: white; border-color: #6F9B04; border-radius:0px;">DEVIS
                                 GRATUIT</a>
                         </div>
                     </div>
@@ -181,8 +182,8 @@
         </div>
 
         <div class="text-center mt-4">
-            <a href="#" class="btn btn-primary btn-color"
-                style="background-color: #6F9B04; color: white;border-color: #6F9B04;">CONTACTEZ-NOUS</a>
+            <a href="#contact" class="btn btn-primary btn-color"
+                style="background-color: #6F9B04; color: white;border-color: #6F9B04; border-radius:0px">CONTACTEZ-NOUS</a>
         </div>
     </div>
 </section>
@@ -213,7 +214,8 @@
 " id="réalisations">
     <div class="container realisations-section">
         <h2 class="section-title mt-5">Nos réalisations</h2>
-        <p class="me-5" style="text-align: center;">Découvrez les résultats remarquables de nos nettoyages 100%
+        <p class="me-5" style="text-align: center;color: #686262;">Découvrez les résultats remarquables de nos
+            nettoyages 100%
             écologiques dans les photos
             ci-dessous. Vous
             pourrez
